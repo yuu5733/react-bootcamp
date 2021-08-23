@@ -1,19 +1,19 @@
-//import './index.css';
 import React from "react";
 import ReactDOM from "react-dom";
-// BrowserRouterをインポート
 import { BrowserRouter } from "react-router-dom";
 import { RootRouter } from "./Route";
+import { createTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
+
+const theme = createTheme();
 
 ReactDOM.render(
   <React.StrictMode>
-    {/*
-      この位置に<BrowserRouter>を挿入する
-      これにより、react-router-domが初期化され、アプリケーションでreact-router-domが使用できるようになる
-    */}
-    <BrowserRouter>
-      <RootRouter />
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <CssBaseline />
+        <RootRouter />
+      </BrowserRouter>
+      </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
