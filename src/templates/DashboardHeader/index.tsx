@@ -1,18 +1,33 @@
-import { AppBar, IconButton, Toolbar } from "@material-ui/core";
+import { AppBar, Avatar, IconButton, Toolbar } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-//import { Logo } from "components/Logo/index";
-import { Logo } from "../../components/Logo";
+import VideoCallIcon from "@material-ui/icons/VideoCall";
+import { Logo } from "components/Logo";
+import { SearchBar } from "templates/DashboardHeader/SearchBar/index";
+
+import useStyles from "templates/DashboardHeader/styles";
 
 export const DashboardHeader = () => {
+  // CSSを生成
+  const styles = useStyles();
+
   return (
-    <AppBar>
+    <AppBar elevation={0} color="inherit">
       <Toolbar>
         <IconButton>
           <MenuIcon />
         </IconButton>
-        <div>
+        <div className={styles.logo}>
           <Logo />
         </div>
+        <SearchBar />
+
+        <IconButton>
+          <VideoCallIcon />
+        </IconButton>
+
+        <IconButton className={styles.profileIcon}>
+          <Avatar />
+        </IconButton>
       </Toolbar>
     </AppBar>
   );
