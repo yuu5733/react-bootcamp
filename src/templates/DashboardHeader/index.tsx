@@ -20,9 +20,10 @@ export const DashboardHeader = () => {
           <div className={styles.logo}>
             <Logo />
           </div>
-          <SearchBar />
         </div>
 
+        <SearchBar />
+        
         <div className={styles.flex}>
           <IconButton>
             <VideoCallIcon />
