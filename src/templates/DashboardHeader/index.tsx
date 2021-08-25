@@ -12,22 +12,26 @@ export const DashboardHeader = () => {
 
   return (
     <AppBar elevation={0} color="inherit">
-      <Toolbar>
-        <IconButton>
-          <MenuIcon />
-        </IconButton>
-        <div className={styles.logo}>
-          <Logo />
+      <Toolbar className={styles.between}>
+        <div className={styles.flex}>
+          <IconButton>
+            <MenuIcon />
+          </IconButton>
+          <div className={styles.logo}>
+            <Logo />
+          </div>
+          <SearchBar />
         </div>
-        <SearchBar />
 
-        <IconButton>
-          <VideoCallIcon />
-        </IconButton>
+        <div className={styles.flex}>
+          <IconButton>
+            <VideoCallIcon />
+          </IconButton>
 
-        <IconButton className={styles.profileIcon}>
-          <Avatar />
-        </IconButton>
+          <IconButton className={styles.profileIcon}>
+            <Avatar />
+          </IconButton>
+        </div>
       </Toolbar>
     </AppBar>
   );
