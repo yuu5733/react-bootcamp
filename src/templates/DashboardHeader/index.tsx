@@ -1,10 +1,10 @@
 import { AppBar, Avatar, IconButton, Toolbar } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import VideoCallIcon from "@material-ui/icons/VideoCall";
-import { Logo } from "components/Logo";
-import { SearchBar } from "templates/DashboardHeader/SearchBar/index";
+import { Logo } from "src/components/Logo";
+import { SearchBar } from "src/templates/DashboardHeader/SearchBar/index";
 
-import useStyles from "templates/DashboardHeader/styles";
+import useStyles from "src/templates/DashboardHeader/styles";
 
 export const DashboardHeader = () => {
   // CSSを生成

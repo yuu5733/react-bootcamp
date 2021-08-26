@@ -1,6 +1,6 @@
 import { InputBase, Paper } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
-import useStyles from "templates/DashboardHeader/SearchBar/styles";
+import useStyles from "src/templates/DashboardHeader/SearchBar/styles";
 
 export const SearchBar = () => {
   const styles = useStyles();
