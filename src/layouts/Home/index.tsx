@@ -7,12 +7,12 @@ export const HomeLayout = () => {
   const styles = useStyles();
 
   return (
-    <div className={styles.flex}>
+    <div className={styles.root}>
       <DashboardHeader />
 
-    <div className={styles.sidebar}>
-      <Sidebar />
-    </div>
+      <div className={styles.sidebar}>
+        <Sidebar />
+      </div>
 
       <div className={styles.main}>
         <Outlet />
