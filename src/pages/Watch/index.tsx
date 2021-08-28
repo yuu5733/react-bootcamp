@@ -1,5 +1,7 @@
 import { Container, Grid } from "@material-ui/core";
+
 import { VideoPlayerCard } from "src/pages/Watch/VideoPlayerCard";
+import { VideoHorizontalCard } from "src/components/VideoHorizontalCard";
 
 import useStyles from "src/pages/Watch/style";
 
@@ -13,7 +15,20 @@ export const Watch = () => {
           <VideoPlayerCard />
         </Grid>
 
-        <Grid item xs={4}>Video Card List</Grid>
+        <Grid item xs={4}>
+          <div className={styles.cardPadding}>
+            <VideoHorizontalCard />
+          </div>
+          <div className={styles.cardPadding}>
+            <VideoHorizontalCard />
+          </div>
+          <div className={styles.cardPadding}>
+            <VideoHorizontalCard />
+          </div>
+          <div className={styles.cardPadding}>
+            <VideoHorizontalCard />
+          </div>
+        </Grid>
       </Grid>
     </Container>
   );

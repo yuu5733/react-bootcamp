@@ -1,4 +1,7 @@
 import { Avatar, Card, CardHeader, CardMedia } from "@material-ui/core";
+import { HeaderTitle } from "src/components/VideoCard/HeaderTitle";
+import { SubHeaderContent } from "src/components/VideoCard/SubHeaderContent";
+
 import useStyles from "src/components/VideoCard/style";
 
 export const VideoCard = () => {
@@ -18,8 +21,8 @@ export const VideoCard = () => {
       <CardHeader
         className={styles.header}
         avatar={<Avatar aria-label="profile picture"/>}
-        title="Organization Admin Settings: Dashboard overview [1/7]"
-        subheader="Figma 16K views  2 months ago"
+        title={<HeaderTitle />}
+        subheader={<SubHeaderContent />}
       />
     </Card>
   );
