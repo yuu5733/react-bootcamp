@@ -7,13 +7,18 @@ import {
 } from "@material-ui/core";
 
 import { VideoSelect } from "src/pages/Upload/VideoSelector";
+import { UploadForm } from "src/pages/Upload/UploadForm";
+
+import useStyles from "./style";
 
 export const Upload = () => {
+  const styles = useStyles();
+
   return (
     <Dialog fullWidth={true} maxWidth="md" open={true}>
       <DialogTitle>動画のアップロード</DialogTitle>
       <Divider />
-      <DialogContent>
+      <DialogContent className={styles.body}>
         <Grid container spacing={4}>
           <Grid xs item>
             <VideoSelect /> 
@@ -22,7 +27,7 @@ export const Upload = () => {
           <Divider orientation="vertical" flexItem />
 
           <Grid xs item>
-            右側
+            <UploadForm />
           </Grid>
         </Grid>
       </DialogContent>
