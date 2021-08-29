@@ -1,8 +1,8 @@
 import { Avatar, Card, CardHeader, CardMedia } from "@material-ui/core";
 import { HeaderTitle } from "src/components/VideoCard/HeaderTitle";
-import { SubHeaderContent } from "src/components/VideoCard/SubHeaderContent";
+import { SubHeaderContent } from "./SubHeaderContent";
 
-import useStyles from "src/components/VideoCard/style";
+import useStyles from "./style";
 
 export const VideoCard = () => {
   const styles = useStyles();

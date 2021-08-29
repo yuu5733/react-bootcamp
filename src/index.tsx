@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import { RootRouter } from "./Route";
+import { RootRouter } from "src/Route";
 import { createTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
 
 import GlobalStyle from "src/GlobalStyle";

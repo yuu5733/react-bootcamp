@@ -1,4 +1,4 @@
-import useStyles from "src/components/Logo/style";
+import useStyles from "./style";
 
 export const Logo = () => {
   // CSSを生成

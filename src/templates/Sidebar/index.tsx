@@ -5,7 +5,7 @@ import WhatshotIcon from "@material-ui/icons/Whatshot";
 import ExploreOutlinedIcon from '@material-ui/icons/ExploreOutlined';
 import SubscriptionsIcon from "@material-ui/icons/Subscriptions";
 
-import useStyles from "src/templates/Sidebar/style";
+import useStyles from "./style";
 
 export const Sidebar = () => {
   const styles = useStyles();

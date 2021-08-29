@@ -1,6 +1,6 @@
 import { Button, CardMedia, Grid, Typography } from "@material-ui/core";
 import { useState, useRef, ChangeEvent, useEffect} from "react";
-import useStyles from "src/pages/Upload/VideoSelector/style";
+import useStyles from "./style";
 
 export const VideoSelect = () => {
   const styles = useStyles();

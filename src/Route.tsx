@@ -1,11 +1,12 @@
 import { Navigate, useRoutes } from "react-router-dom";
 
-import { HomeLayout } from "./layouts/Home";
-import { SideLessHomeLayout } from "./layouts/SideLessHome";
-import { SimpleLayout } from "./layouts/Simple";
+import { HomeLayout } from "src/layouts/Home";
+import { SideLessHomeLayout } from "src/layouts/SideLessHome";
+import { SimpleLayout } from "src/layouts/Simple";
 import { Home } from "src/pages/Home";
 import { Upload } from "src/pages/Upload";
 import { Watch } from "src/pages/Watch";
+import { Login } from "src/pages/Login";
 
 export const RootRouter = () => {
   return useRoutes([
@@ -35,7 +36,7 @@ export const RootRouter = () => {
     {
       element: <SimpleLayout />,
       children: [
-        { path: "login", element: <div>ログイン</div> },
+        { path: "login", element: <Login /> },
         { path: "signup", element: <div>新規作成</div> },
         { path: "forget", element: <div>パスワードリセット</div> },
         { path: "404", element: <div>Not Found</div> },

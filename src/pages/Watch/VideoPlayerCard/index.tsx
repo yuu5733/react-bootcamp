@@ -8,8 +8,7 @@ import {
   Typography,
 } from "@material-ui/core";
 
-import useStyles from "src/pages/Watch/VideoPlayerCard/style";
-
+import useStyles from "./style";
 
 export const VideoPlayerCard = () => {
   const styles = useStyles();

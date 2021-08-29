@@ -3,7 +3,7 @@ import { Card, CardHeader, CardMedia } from "@material-ui/core";
 import { HeaderTitle } from "src/components/VideoCard/HeaderTitle";
 import { SubHeaderContent } from "src/components/VideoCard/SubHeaderContent";
 
-import useStyles from "./styles";
+import useStyles from "./style";
 
 export const VideoHorizontalCard = () => {
   const styles = useStyles();
