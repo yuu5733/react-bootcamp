@@ -3,15 +3,14 @@ import { Button, Card, TextField, Typography } from "@material-ui/core";
 import { Logo } from "src/components/Logo";
 import useStyles from "./style";
 
-export const Login = () => {
+export const Signup = () => {
   const styles = useStyles();
 
   useEffect(() => {
-    document.title = "ログイン";
+    document.title = "新規アカウント登録";
   });
 
   return (
-    // 全体を囲むCardコンポーネント
     <Card className={styles.root} variant="outlined">
       {/* ロゴコンポーネント */}
       <div className={`${styles.logo} ${styles.margin}`}>
@@ -20,8 +19,14 @@ export const Login = () => {
 
       {/* タイトルコンポーネント */}
       <Typography className={styles.margin} component="h1" variant="h5">
-        ログイン
+        新規アカウント登録
       </Typography>
+
+      {/* 名前フィールド */}
+      <label className={`${styles.label} ${styles.margin}`}>
+        <Typography>名前</Typography>
+        <TextField required size="small" fullWidth variant="outlined" />
+      </label>
 
       {/* メールアドレスフィールド */}
       <label className={`${styles.label} ${styles.margin}`}>
@@ -50,20 +55,16 @@ export const Login = () => {
       {/* Submitボタン */}
       <div className={styles.margin}>
         <Button variant="contained" color="primary">
-          ログイン
+          新規作成
         </Button>
       </div>
 
       <div>
-        <Button href="signup" color="primary">
-          アカウント作成はこちら
-        </Button>
-      </div>
-      <div>
-        <Button href="forget" color="primary">
-          パスワードを忘れた場合はこちら
+        <Button href="Login" color="primary">
+          ログインはこちら
         </Button>
       </div>
     </Card>
   );
 };
+
