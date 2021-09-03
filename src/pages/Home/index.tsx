@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 import { Container, Grid } from "@material-ui/core";
 import { VideoCard } from "src/components/VideoCard";
 
