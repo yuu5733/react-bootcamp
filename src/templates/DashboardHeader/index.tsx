@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import {
   AppBar,
@@ -36,9 +37,10 @@ export const DashboardHeader = () => {
           <IconButton>
             <MenuIcon />
           </IconButton>
-          <div className={styles.logo}>
+
+          <Link to="/" className={styles.logo}>
             <Logo />
-          </div>
+          </Link>
         </div>
 
         <SearchBar />

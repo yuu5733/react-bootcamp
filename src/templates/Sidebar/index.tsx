@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
-
 import HomeIcon from "@material-ui/icons/Home";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import ExploreOutlinedIcon from '@material-ui/icons/ExploreOutlined';
@@ -12,7 +12,7 @@ export const Sidebar = () => {
 
   return (
     <List className={styles.root} component="nav" aria-label="search video categorys">
-      <ListItem button>
+      <ListItem button component={Link} to="/">
         <ListItemIcon>
           <HomeIcon />
         </ListItemIcon>

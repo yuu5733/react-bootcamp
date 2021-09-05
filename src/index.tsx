@@ -1,8 +1,11 @@
+// React
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { RootRouter } from "src/Route";
+// meratial-ui
 import { createTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
+// apollo: React で GraphQL を簡単に使用できるにするライブラリ群
 import {
   ApolloProvider,
   ApolloClient,
@@ -10,6 +13,9 @@ import {
   InMemoryCache,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+// Recoil: グローバルステートの管理
+import { RecoilRoot } from "recoil";
+// Style
 import GlobalStyle from "src/GlobalStyle";
 
 const theme = createTheme();
@@ -42,16 +48,18 @@ const apolloClient = new ApolloClient({
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      {/*  Apollo Clientを初期化して、アプリケーション全体でApollo Clientを使えるようにする  */}
-      <ApolloProvider client={apolloClient}>
-        <BrowserRouter>
-          <CssBaseline />
-          <GlobalStyle />
-          <RootRouter />
-        </BrowserRouter>
-      </ApolloProvider>
-    </ThemeProvider>
+    <RecoilRoot>
+      <ThemeProvider theme={theme}>
+        {/*  Apollo Clientを初期化して、アプリケーション全体でApollo Clientを使えるようにする  */}
+        <ApolloProvider client={apolloClient}>
+          <BrowserRouter>
+            <CssBaseline />
+            <GlobalStyle />
+            <RootRouter />
+          </BrowserRouter>
+        </ApolloProvider>
+      </ThemeProvider>
+    </RecoilRoot>
   </React.StrictMode>,
   document.getElementById("root")
 );
