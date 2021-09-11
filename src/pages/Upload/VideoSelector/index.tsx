@@ -36,8 +36,8 @@ export const VideoSelect = () => {
       // <video>のビューを<canvas>に転写
       context.drawImage(video, 0, 0);
 
-      // prevs: 保存済みのstateの値（配列）、新しい関数を作ることで更新される。pushだとダメ。
-      setThumbnailURLs((prevs: string[]) => [...prevs, canvas.toDataURL("image/jpeg")]);
+      // prevState: 保存済みのstateの値（配列）、新しい関数を作ることで更新される。pushだとダメ。
+      setThumbnailURLs((prevState: string[]) => [...prevState, canvas.toDataURL("image/jpeg")]);
       video.currentTime += Math.ceil(video.duration / 3);
     };
 

@@ -331,7 +331,7 @@ export type Timestamptz_Comparison_Exp = {
 export type Users = {
   __typename?: 'users';
   created_at: Scalars['timestamptz'];
-  email?: Maybe<Scalars['String']>;
+  email: Scalars['String'];
   id: Scalars['String'];
   name: Scalars['String'];
   profile_photo_url: Scalars['String'];
@@ -747,22 +747,25 @@ export type Videos_Variance_Fields = {
 export type InsertUserMutationVariables = Exact<{
   id: Scalars['String'];
   name: Scalars['String'];
+  email?: Maybe<Scalars['String']>;
 }>;
 
 
-export type InsertUserMutation = { __typename?: 'mutation_root', insert_users_one?: Maybe<{ __typename?: 'users', id: string, name: string, email?: Maybe<string>, profile_photo_url: string, created_at: any, updated_at: any }> };
+export type InsertUserMutation = { __typename?: 'mutation_root', insert_users_one?: Maybe<{ __typename?: 'users', id: string, name: string, email: string, profile_photo_url: string, created_at: any, updated_at: any }> };
 
 export type UserByIdQueryVariables = Exact<{
   id: Scalars['String'];
 }>;
 
 
-export type UserByIdQuery = { __typename?: 'query_root', users_by_pk?: Maybe<{ __typename?: 'users', id: string, name: string, email?: Maybe<string>, profile_photo_url: string, created_at: any, updated_at: any }> };
+export type UserByIdQuery = { __typename?: 'query_root', users_by_pk?: Maybe<{ __typename?: 'users', id: string, name: string, email: string, profile_photo_url: string, created_at: any, updated_at: any }> };
 
 
 export const InsertUserDocument = gql`
-    mutation InsertUser($id: String!, $name: String!) {
-  insert_users_one(object: {id: $id, name: $name, profile_photo_url: ""}) {
+    mutation InsertUser($id: String!, $name: String!, $email: String) {
+  insert_users_one(
+    object: {id: $id, name: $name, email: $email, profile_photo_url: ""}
+  ) {
     id
     name
     email
@@ -789,6 +792,7 @@ export type InsertUserMutationFn = Apollo.MutationFunction<InsertUserMutation, I
  *   variables: {
  *      id: // value for 'id'
  *      name: // value for 'name'
+ *      email: // value for 'email'
  *   },
  * });
  */
